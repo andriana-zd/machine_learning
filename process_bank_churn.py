@@ -1,3 +1,10 @@
+import pandas as pd
+import numpy as np
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.model_selection import train_test_split
+from typing import Dict, Any
+
 def preprocess_data(raw_df: pd.DataFrame) -> Dict[str, Any]:
     """
     Виконує попередню обробку сирих даних, включаючи розбиття на train/val/test,
